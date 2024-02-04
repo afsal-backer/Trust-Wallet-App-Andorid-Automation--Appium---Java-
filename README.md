@@ -53,9 +53,8 @@ To run the tests, navigate to the project directory and execute the following co
 
 ```bash
 mvn clean test -DsuiteXmlFile=e2e.xml
-
+```
     This will pick the E2E tests mentioned in the e2e.xml file and run them on the simulator.
-
 
 ## Reporting
 
@@ -63,3 +62,4 @@ mvn clean test -DsuiteXmlFile=e2e.xml
 
 ```bash
 mvn allure:serve
+```
