@@ -1,0 +1,9 @@
+/allure-results
+/allure-report
+!/allure-report/index.html
+!/allure-report/favicon.ico
+!/allure-report/status.json
+.vscode
+local.log
+/target
+.DS_Store
