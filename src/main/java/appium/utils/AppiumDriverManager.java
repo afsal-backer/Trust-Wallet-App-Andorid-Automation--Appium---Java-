@@ -18,11 +18,11 @@ public class AppiumDriverManager {
                .setAutomationName("UiAutomator2")
                .setApp(APP_PATH);
        
-               String sURL = AppiumServerUtility.getServiceUrl();
+        String sURL = AppiumServerUtility.getServiceUrl();
         var serverUrl = URI.create(sURL).toURL();
-        AndroidDriver driver = new AndroidDriver(serverUrl, options);
         
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+        AndroidDriver driver = new AndroidDriver(serverUrl, options);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         setDriver(driver);
     }
 
@@ -35,7 +35,6 @@ public class AppiumDriverManager {
             getDriver().quit();
             DRIVER.remove();
         }
-        // Stop the Appium server
         AppiumServerUtility.stopServer();
     }
 
